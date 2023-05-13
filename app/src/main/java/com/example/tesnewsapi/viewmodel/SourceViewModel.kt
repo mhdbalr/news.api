@@ -4,13 +4,17 @@ package com.example.tesnewsapi.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.tesnewsapi.model.Source
+import com.example.tesnewsapi.network.ApiService
 import com.example.tesnewsapi.network.NetworkClient
+import dagger.hilt.android.lifecycle.HiltViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
+@HiltViewModel
+class SourceViewModel @Inject constructor(var api : ApiService) : ViewModel(){
 
-class SourceViewModel: ViewModel(){
 lateinit var liveDataSource : MutableLiveData<List<Source>?>
 
 init {
@@ -22,7 +26,7 @@ fun getDataSource(): MutableLiveData<List<Source>?> {
 }
 
 fun callApiSource(category : String){
-    NetworkClient.instance.getAllSources(category)
+   api.getAllSources(category)
         .enqueue(object : Callback<List<Source>> {
             override fun onResponse(
                 call: Call<List<Source>>,

@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tesnewsapi.databinding.ActivitySourceBinding
 import com.example.tesnewsapi.view.adapter.SourceAdapter
 import com.example.tesnewsapi.viewmodel.SourceViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SourceActivity : AppCompatActivity() {
     lateinit var binding : ActivitySourceBinding
     lateinit var sourceAdapter : SourceAdapter
