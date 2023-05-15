@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">tes news.api</string>
     <string name="busines">busines</string>
+    <string name="bbc_news">BBC-News</string>
 </resources>
