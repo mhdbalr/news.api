@@ -14,7 +14,7 @@
             android:id="@+id/categoryImage"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:contentDescription="TODO" />
+            android:contentDescription="@string/todo" />
         <TextView
             android:id="@+id/categoryName"
             android:text="@string/busines"

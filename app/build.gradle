@@ -36,6 +36,11 @@ android {
         dataBinding true
         viewBinding true
     }
+    android {
+        lint {
+            lintConfig file("lint.xml")
+        }
+    }
 }
 
 dependencies {
